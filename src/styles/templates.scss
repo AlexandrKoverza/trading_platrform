@@ -1,0 +1,76 @@
+@import "./mixins";
+
+.title {
+  color: white;
+  @include adaptiveFont(38, 20);
+  font-family: Cedra;
+  text-transform: uppercase;
+}
+
+.form {
+  background-color: #1C1C1F;
+  flex-direction: column;
+  width: 447px;
+  border-radius: 25px;
+  @include adaptiveValue('padding', 15, 10, 0);
+}
+
+.form__input {
+  border-radius: 25px;
+  background-color: #131316;
+  height: 55px;
+  padding: 5px 0px 5px 0px;
+  font-size: 18px;
+  margin-top: 5px;
+  color: white;
+  @include adaptiveFont(16, 14);
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (max-width: 575px) {
+    height: 35px;
+  }
+}
+
+.form__name {
+  color: white;
+  font-size: 13px;
+}
+
+.form__button {
+  width: 100%;
+  height: 40px;
+  background-color: #1E1E20;
+  border-radius: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #333333, #2b2b2b);
+  box-shadow: 3px 3px 3px #212121,
+    -3px -3px 4px #242424;
+  cursor: pointer;
+
+  @media (max-width: 575px) {
+    height: 35px;
+    font-size: 13px;
+    width: 150px;
+    color: $yellow;
+    text-transform: lowercase;
+  }
+}
+
+.form__button:first-child {
+  margin-right: 15px;
+  @media (max-width: 575px) {
+      margin-right: 0;
+      margin-top: 10px;
+  }
+}
+
+.text {
+  color: white;
+  font-size: 16px;
+}

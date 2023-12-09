@@ -1,0 +1,99 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.be {
+    width: 100%;
+    background-color: #121212;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    &__inner {
+        padding: 89px 0px 53px 0px;
+    }
+
+    &__title {
+        text-align: right;
+    }
+
+    &__block {
+        margin-top: 94px;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        @media (max-width: 575px) {
+            align-items: flex-start;
+            flex-direction: row;
+        }
+    }
+
+    &__box:nth-child(2) {
+        margin-top: 84px;
+        margin-bottom: 84px;
+    }
+
+    &__photo {
+        width: 80px;
+        margin-left: 28px;
+        @media (max-width: 575px) {
+            width: 50px;
+            margin-left: 0;
+            margin-right: 15px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__texts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__textsTitle {
+        color: white;
+        @include adaptiveFont(18, 15);
+        text-align: right;
+        @media (max-width: 575px) {
+            text-align-last: left;
+        }
+    }
+
+    &__textsSubtitle {
+        color: white;
+        @include adaptiveFont(14, 12);
+        text-align: right;
+        @media (max-width: 575px) {
+            margin-top: 15px;
+        }
+    }
+
+    &__button {
+        display: block;
+        @include adaptiveValue('width', 212, 111, 0);
+        @include adaptiveValue('height', 45, 31, 0);
+        @include adaptiveFont(16, 10);
+        background-color: #1C1C1C;
+        border-radius: 25px;
+        color: $yellow;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 7px rgb(88, 88, 88);
+        margin-left: auto;
+        margin-top: 46px;
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 360px;
+        z-index: -1;
+        @media (max-width: 575px) {
+            width: 230px;
+        }
+    }
+}
+

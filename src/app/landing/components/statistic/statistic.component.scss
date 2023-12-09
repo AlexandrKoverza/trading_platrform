@@ -1,0 +1,106 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.statistic {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    background-image: url('../../../../assets/images/statistic__bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+
+    @media (max-width: 420px) {
+        background-position-x: -500px;
+
+    }
+
+    &__inner {
+        @include adaptiveValue('padding-top', 395, 30, 0);
+        @include adaptiveValue('padding-bottom', 365, 80, 0);
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__left {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include adaptiveValue('gap', 34, 15, 0);
+        @media (max-width: 575px) {
+            flex-direction: column;
+        }
+    }
+
+    &__box {
+        width: 32%;
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+    }
+
+    &__name {
+        display: block;
+        @include adaptiveValue('width', 170, 111, 0);
+        @include adaptiveValue('height', 45, 31, 0);
+        @include adaptiveFont(26, 14);
+        background-color: #1C1C1C;
+        border-radius: 25px;
+        color: $yellow;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 7px rgb(88, 88, 88);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 15px;
+        position: absolute;
+        left: -20px;
+        bottom: 182px;
+        @media (max-width: 768px) {
+            left: auto;
+            right: -20px;
+            padding-right: 0;
+            justify-content: flex-start;
+            padding-left: 15px;
+            bottom: auto;
+        }
+    }
+
+    &__line {
+        width: 122px;
+        height: 3px;
+        background-color: $yellow;
+    }
+
+    &__text {
+        margin-top: 10px;
+        color: white;
+    }
+
+    &__right {
+        width: 100%;
+        margin-top: 100px;
+        @media (max-width: 768px) {
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        bottom: -300px;
+        z-index: -1;
+    }
+}

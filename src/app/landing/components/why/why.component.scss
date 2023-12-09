@@ -1,0 +1,119 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.why {
+    width: 100%;
+    background-color: #121212;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    background-image: url('../../../../assets/images/why_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+
+    &__inner {
+        width: 100%;
+        padding: 55px 0px 55px 0px;
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include adaptiveValue('gap', 142, 15, 0);
+    }
+
+    &__box {
+        @include adaptiveValue('width', 376, 130, 0);
+        @include adaptiveValue('height', 410, 130, 0);
+        position: relative;
+    }
+
+    &__cube {
+        @include adaptiveValue('width', 360, 110, 0);
+        @include adaptiveValue('height', 360, 110, 0);
+        background: #1C1C1F;
+        box-shadow: inset 5px 5px 28px #232323,
+        inset -5px -5px 28px #3d3d3d;
+    }
+
+    &__block {
+        position: absolute;
+        right: -10px;
+        bottom: 0px;
+        @include adaptiveValue('width', 297, 110, 0);
+        @include adaptiveValue('height', 297, 110, 0);
+        background-color: #1E1E20;
+        box-shadow: -7px -8px 12px -6px rgb(121, 121, 121);
+        padding: 46px 0px 46px 0px;
+        @media (max-width: 768px) {
+            padding: 5px;
+            right: 5px;
+        }
+    }
+
+    &__name {
+        color: white;
+        @include adaptiveFont(27, 12);
+        text-align: center;
+        display: block;
+    }
+
+    &__text {
+        color: $yellow;
+        @include adaptiveFont(20, 11);
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    &__right {
+        width: 15%;
+    }
+
+    &__title {
+        display: block;
+        @include adaptiveValue('width', 150, 111, 0);
+        @include adaptiveValue('height', 45, 31, 0);
+        @include adaptiveFont(26, 14);
+        background-color: #1C1C1C;
+        border-radius: 25px;
+        color: $yellow;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 7px rgb(88, 88, 88);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 15px;
+        position: absolute;
+        right: -20px;
+        @media (max-width: 920px) {
+            top: 12px;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        @media (max-width: 768px) {
+            left: -100%;
+        }
+        @media (max-width: 575px) {
+            left: -310%;
+        }
+    }
+}

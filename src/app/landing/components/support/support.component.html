@@ -1,0 +1,58 @@
+<section class="support">
+    <div class="container">
+        <div class="support__inner">
+            <div class="support__row">
+                <div class="support__left">
+                    <div class="support__menu">
+                        <button class="support__menuButton" (click)="supportButton()">Support</button>
+                        <button class="support__menuButton" (click)="contactButton()">Contact Us</button>
+                    </div>
+                    <form action="#" class="support__form" *ngIf="support">
+                        <h2 class="support__formTitle">support</h2>
+                        <div class="support__box">
+                            <span class="support__name">Name:</span>
+                            <input type="text" class="support__input">
+                        </div>
+                        <div class="support__box">
+                            <span class="support__name">Surname:</span>
+                            <input type="text" class="support__input">
+                        </div>
+                        <div class="support__box">
+                            <span class="support__name">Phone:</span>
+                            <input type="tel" class="support__input">
+                        </div>
+                        <div class="support__box">
+                            <span class="support__name">Email:</span>
+                            <input type="email" class="support__input">
+                        </div>
+                        <div class="support__box">
+                            <span class="support__name">Your message:</span>
+                            <textarea class="support__input"></textarea>
+                        </div>
+                        <button class="support__button">Send</button>
+                    </form>
+                    <div class="support__contact" *ngIf="contact">
+                        <div class="support__box">
+                            <span class="support__name">Phone</span>
+                            <input type="tel" class="support__input" value="+123-456-7890">
+                        </div>
+                        <div class="support__box">
+                            <span class="support__name">Email</span>
+                            <input type="email" class="support__input" value="info@cryptotrade.com">
+                        </div>
+                    </div>
+                </div>
+                <div class="support__right">
+                    <div class="support__photo">
+                        <img src="assets/images/support_img.png" alt="image" class="support__img">
+                    </div>
+                    <div class="support__bottom">
+                        <h2 class="support__title title">contact us</h2>
+                        <input type="tel" class="support__input" value="+123-456-7890">
+                        <input type="email" class="support__input" value="info@cryptotrade.com">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

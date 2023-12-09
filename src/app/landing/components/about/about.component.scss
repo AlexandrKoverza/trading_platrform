@@ -1,0 +1,90 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.about {
+    width: 100%;
+    background-color: black;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    background-size: 620px;
+    &__inner {
+        padding-top: 42px;
+        padding-bottom: 57px;
+    }
+
+    &__row {
+        @include adaptiveValue('margin-top', 69, 35, 0);
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__block {
+        width: 28%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__block:nth-child(2) {
+        @media (max-width: 768px) {
+            margin-top: 28px;
+            margin-bottom: 28px;
+        }
+    }
+
+    &__photo {
+        width: 190px;
+        @media (max-width: 920px) {
+            width: 99px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__text {
+        margin-top: 29px;
+        color: white;
+        text-align: center;
+        @include adaptiveFont(16, 14);
+    }
+
+    &__button {
+        display: block;
+        @include adaptiveValue('width', 212, 111, 0);
+        @include adaptiveValue('height', 45, 31, 0);
+        @include adaptiveFont(16, 10);
+        background-color: #1C1C1C;
+        border-radius: 25px;
+        color: $yellow;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 7px rgb(88, 88, 88);
+        margin: 0 auto;
+        margin-top: 57px;
+    }
+
+
+    &__bg {
+        position: absolute;
+        right: 200px;
+        bottom: 0;
+        width: 700px;
+        z-index: -1;
+        @media (max-width: 992px) {
+            right: 0;
+        }
+        @media (max-width: 575px) {
+            width: 400px;
+        }
+    }
+}

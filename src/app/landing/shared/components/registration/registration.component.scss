@@ -1,0 +1,84 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixins";
+
+.popup {
+    position: fixed;
+    top: 15%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100vh;
+    z-index: 1000;
+    @media (max-width: 575px) {
+        top: 8%;
+    }
+    &__content {
+        width: 100%;
+        max-height: 550px;
+        position: relative;
+        background-color: #1C1C1F; 
+        border-radius: 25px;
+        @include adaptiveValue('padding-top', 34, 15, 0);
+        @include adaptiveValue('padding-bottom', 34, 15, 0);
+        @include adaptiveValue('padding-left', 78, 15, 0);
+        @include adaptiveValue('padding-right', 78, 15, 0);
+
+        .popup-top {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            &__title {
+                width: 100%;
+                @include adaptiveFont(38, 28);
+                color: $yellow;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+        }
+    }
+
+    &__row {
+        width: 100%;
+        margin-top: 15px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media (max-width: 575px) {
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        width: 40%;
+        @media (max-width: 768px) {
+            width: 48%;
+        }
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .form__button {
+        @include adaptiveValue('width', 321, 185, 0);
+        @include adaptiveValue('height', 50, 35, 0);
+        margin: 0 auto;
+        @include adaptiveValue('margin-top', 34, 15, 0);
+        @include adaptiveFont(16, 14);
+    }
+
+    &__text {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        color: $yellow;
+        margin-top: 15px;
+    }
+
+}

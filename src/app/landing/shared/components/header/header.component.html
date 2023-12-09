@@ -1,0 +1,52 @@
+<section class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__left">
+                <img src="assets/images/logo.png" alt="image" class="header__img">
+            </div>
+            <div class="header__right">
+                <nav class="header__nav" *ngIf="nav">
+                    <span class="header__name">Menu</span>
+                    <div class="header__box">
+                        <div class="header__photo">
+                            <img src="assets/images/icon.png" alt="icon" class="header__img">
+                        </div>
+                        <button (click)="about()" class="header__text">about us</button>
+                    </div>
+                    <div class="header__box">
+                        <div class="header__photo">
+                            <img src="assets/images/icon2.png" alt="icon" class="header__img">
+                        </div>
+                        <button (click)="about()" class="header__text">trading</button>
+                    </div>
+                    <div class="header__box">
+                        <div class="header__photo">
+                            <img src="assets/images/icon3.png" alt="icon" class="header__img">
+                        </div>
+                        <button (click)="about()" class="header__text">statistics</button>
+                    </div>
+                    <div class="header__box">
+                        <div class="header__photo">
+                            <img src="assets/images/icon4.png" alt="icon" class="header__img">
+                        </div>
+                        <button (click)="about()" class="header__text">packages</button>
+                    </div>
+                    <div class="header__box">
+                        <div class="header__photo">
+                            <img src="assets/images/icon5.png" alt="icon" class="header__img">
+                        </div>
+                        <button (click)="about()" class="header__text">contact us</button>
+                    </div>
+                </nav>
+                <div class="header__block" #target>
+                    <div class="header__user">
+                        <img src="assets/images/user_icon.png" alt="icon" class="header__img">
+                    </div>
+                    <div class="header__burger" (click)="burger()">
+                        <img src="assets/images/burger.png" alt="icon" class="header__img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,52 @@
+<section class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <div class="intro__row">
+                <div class="intro__left">
+                    <div class="intro__photo">
+                        <img src="assets/images/bitcoin_gif.gif" alt="gif" class="intro__img">
+                    </div>
+                </div>
+                <div class="intro__right">
+                    <h1 class="intro__title">This is an <span>intelligence</span>  trading platform</h1>
+                    <p class="intro__subtitle">jump start your crypto portfolio</p>
+                    <div class="intro__buttons">
+                        <button class="intro__button" (click)="registrationOpenButton()">sign in</button>
+                        <button class="intro__button" (click)="logIn()">log in</button>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__modal form" *ngIf="introModal">
+
+                <div class="login" *ngIf="login">
+                    <span class="login__name">Login</span>
+                    <div class="login__block">
+                        <span class="form__name">Email:</span>
+                        <input type="email" class="form__input">
+                    </div>
+                    <div class="login__block">
+                        <span class="form__name">Password:</span>
+                        <input type="password" class="form__input">
+                    </div>
+                    <div class="login__buttons">
+                        <button class="form__button" (click)="forgotButton()">Forgot password</button>
+                        <button class="form__button" (click)="loginButton()">Login</button>
+                    </div>
+                    <p class="login__bottom">If you are not registered yet <button (click)="registrationOpenButton()">Click Here</button> </p>
+                </div>
+                
+                <div class="login" *ngIf="forgot">
+                    <div class="login__name">Forgot password</div>
+                    <div class="login__block">
+                        <span class="form__name">Email:</span>
+                        <input type="email" class="form__input">
+                    </div>
+                    <button class="forgot__button form__button" (click)="sendEmailButton()">send to email</button>
+                </div>
+    
+            </div>
+        </div>
+
+
+    </div>
+</section>

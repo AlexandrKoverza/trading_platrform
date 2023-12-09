@@ -1,0 +1,158 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.packages {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    background-image: url('../../../../assets/images/packages_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+
+
+    &__inner {
+        @include adaptiveValue('padding-top', 203, 85, 0);
+        @include adaptiveValue('padding-bottom', 46, 20, 0);
+    }
+
+    &__title {
+        display: block;
+        @include adaptiveValue('width', 180, 111, 0);
+        @include adaptiveValue('height', 45, 31, 0);
+        @include adaptiveFont(26, 14);
+        background-color: #1C1C1C;
+        border-radius: 25px;
+        color: $yellow;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 7px rgb(88, 88, 88);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 15px;
+        position: absolute;
+        top: 28px;
+        right: -20px;
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include adaptiveValue('gap', 203, 30, 0);
+        @media (max-width: 840px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__column {
+        width: 32%;
+        @media (max-width: 840px) {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 70px;
+        }
+
+        @media (max-width: 575px) {
+            padding-right: 0;
+        }
+    }
+
+    &__column:nth-child(2) {
+        @media (max-width: 840px) {
+            justify-content: flex-start;
+            padding-left: 70px;
+        }
+
+        @media (max-width: 575px) {
+            padding-left: 0;
+        }
+    }
+
+    &__box {
+        height: 100%;
+        @media (max-width: 840px) {
+            @include adaptiveValue('width', 300, 180, 0);
+        }
+    }
+
+    &__package {
+        height: 100%;
+        align-self: stretch;
+        background-color: #1E1E20;
+        border-radius: 40px;
+        box-shadow: -4px -5px 7px rgb(45, 45, 45);
+        @include adaptiveValue('padding', 20, 15, 0);
+        @include adaptiveValue('padding-bottom', 135, 29, 0);
+    }
+
+    &__top {
+        display: block;
+        @include adaptiveValue('height', 80, 31, 0);
+        @include adaptiveFont(32, 16);
+        background-color: #1C1C1C;
+        border-radius: 40px;
+        color: $yellow;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 7px rgb(88, 88, 88);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include adaptiveValue('margin-bottom', 69, 30, 0);
+    }
+
+
+    &__block {
+        width: 100%;
+        position: relative;
+        @include adaptiveValue('padding-left', 30, 10, 0);
+        @include adaptiveValue('margin-top', 15, 7, 0);
+    }
+
+    &__block:first-child {
+        margin-top: 0;
+    }
+
+    &__block::before {
+        position: absolute;
+        content: '';
+        @include adaptiveValue('width', 9, 4, 0);
+        @include adaptiveValue('height', 9, 4, 0);
+        @include adaptiveValue('top', 6, 3, 0);
+        border-radius: 50%;
+        background-color: white;
+        left: 0;
+    }
+
+    &__text {
+        @include adaptiveFont(22, 12);
+        color: white;
+        margin-right: 7px;
+        display: block;
+        span {
+            color: $yellow;
+        }
+    }
+
+    &__button {
+        margin: 0 auto;
+        display: block;
+        @include adaptiveValue('margin-top', 62, 18, 0);
+        @include adaptiveValue('width', 185, 100, 0);
+        @include adaptiveValue('height', 48, 25, 0);
+        @include adaptiveFont(16, 12);
+        background-color: #1C1C1C;
+        border-radius: 25px;
+        color: $yellow;
+        box-shadow: 0px 0px 7px rgb(88, 88, 88);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,44 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixins";
+
+.footer {
+    width: 100%;
+    background-color: #161619;
+    &__inner {
+        padding: 15px 0px 15px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__photo {
+        @include adaptiveValue('width', 102, 45, 0);
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__texts {
+        width: 80%;
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        color: white;
+        text-align: right;
+        @media (max-width: 575px) {
+            text-align: center;
+        }
+    }
+
+    .copy {
+        @include adaptiveValue('margin-top', 34, 15, 0);
+    }
+}
