@@ -15,8 +15,12 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  burger() {
-    this.nav = !this.nav;
+  home() {
+    this.target.nativeElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
   }
 
   about(): void {
@@ -25,5 +29,41 @@ export class HeaderComponent implements OnInit {
       block: 'start',
       inline: 'nearest'
     });
+  }
+
+  trading() {
+    this.target.nativeElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
+  }
+
+  statistics() {
+    this.target.nativeElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
+  }
+
+  packages() {
+    this.target.nativeElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
+  }
+
+  contact() {
+    this.target.nativeElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
+  }
+
+  burger() {
+    this.nav = !this.nav;
   }
 }
