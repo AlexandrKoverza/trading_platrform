@@ -6,16 +6,12 @@ import { PopupService } from 'src/app/services/popup.service';
   templateUrl: './be.component.html',
   styleUrls: ['./be.component.scss']
 })
-export class BeComponent implements OnInit{
-
+export class BeComponent implements OnInit {
   constructor(public popupService: PopupService) {}
 
-  ngOnInit(): void {
-      
-  }
+  ngOnInit(): void {}
 
   startTrading() {
-    this.popupService.open()
+    this.popupService.open();
   }
-
 }

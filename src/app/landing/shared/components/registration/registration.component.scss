@@ -3,15 +3,14 @@
 
 .popup {
     position: fixed;
-    top: 15%;
+    top: 0%;
     left: 0;
     right: 0;
     bottom: 0;
     min-height: 100vh;
-    z-index: 1000;
-    @media (max-width: 575px) {
-        top: 8%;
-    }
+    z-index: 10000;
+    @include adaptiveValue('padding-top', 130, 65, 0);
+
     &__content {
         width: 100%;
         max-height: 550px;

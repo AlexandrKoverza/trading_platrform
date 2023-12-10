@@ -5,22 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './support.component.html',
   styleUrls: ['./support.component.scss']
 })
-export class SupportComponent implements OnInit{
-  support: boolean = true
-  contact: boolean = false
+export class SupportComponent implements OnInit {
+  support: boolean = true;
+  contact: boolean = false;
 
-  ngOnInit(): void {
-      
-  }
+  ngOnInit(): void {}
 
   supportButton() {
-    this.support = true
-    this.contact = false
+    this.support = true;
+    this.contact = false;
   }
 
   contactButton() {
-    this.support = false
-    this.contact = true
+    this.support = false;
+    this.contact = true;
   }
-
 }

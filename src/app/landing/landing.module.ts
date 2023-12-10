@@ -10,9 +10,9 @@ import { WhyModule } from './components/why/why.module';
 import { StatisticModule } from './components/statistic/statistic.module';
 import { PackagesModule } from './components/packages/packages.module';
 import { SupportModule } from './components/support/support.module';
-import { ForgotModule } from './components/forgot/forgot.module';
 import { BeModule } from './components/be/be.module';
 import { RegistrationModule } from './shared/components/registration/registration.module';
+import { LoginModule } from './shared/components/login/login.module';
 
 @NgModule({
   declarations: [LandingComponent],
@@ -28,8 +28,8 @@ import { RegistrationModule } from './shared/components/registration/registratio
     PackagesModule,
     SupportModule,
     BeModule,
-    ForgotModule,
-    RegistrationModule
+    RegistrationModule,
+    LoginModule
   ],
   exports: [LandingComponent]
 })

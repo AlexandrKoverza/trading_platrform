@@ -1,3 +1,4 @@
+import { LoginService } from './../services/login.service';
 import { Component } from '@angular/core';
 import { PopupService } from '../services/popup.service';
 
@@ -7,6 +8,8 @@ import { PopupService } from '../services/popup.service';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent {
-  constructor(public popupService: PopupService) {}
-
+  constructor(
+    public popupService: PopupService,
+    public loginService: LoginService
+  ) {}
 }

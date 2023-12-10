@@ -6,14 +6,11 @@ import { PopupService } from 'src/app/services/popup.service';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit{
-  
+export class AboutComponent implements OnInit {
   constructor(public popupService: PopupService) {}
 
-  ngOnInit(): void {
-      
-  }
+  ngOnInit(): void {}
   toRegistration() {
-    this.popupService.open()
+    this.popupService.open();
   }
 }

@@ -6,15 +6,10 @@ import { PopupService } from 'src/app/services/popup.service';
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss']
 })
-export class RegistrationComponent implements OnInit{
+export class RegistrationComponent implements OnInit {
+  constructor(public popupService: PopupService) {}
 
-  constructor(private popupService: PopupService) {}
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-      
-  }
-
-  registrationCloseButton() {
-    this.popupService.close()
-  }
+  registrationCloseButton() {}
 }

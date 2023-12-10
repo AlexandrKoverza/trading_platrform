@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 import { PopupService } from 'src/app/services/popup.service';
 
 @Component({
@@ -7,11 +8,10 @@ import { PopupService } from 'src/app/services/popup.service';
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent implements OnInit {
-  introModal: boolean = false;
-  login: boolean = true;
-  forgot: boolean = false;
-
-  constructor(public popupService: PopupService) {}
+  constructor(
+    public popupService: PopupService,
+    public loginService: LoginService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -19,22 +19,7 @@ export class IntroComponent implements OnInit {
     this.popupService.open();
   }
 
-  logIn() {
-    this.introModal = true;
-  }
-
   loginButton() {
-    this.introModal = false;
-  }
-
-  forgotButton() {
-    this.forgot = !this.forgot;
-    this.login = false;
-  }
-
-  sendEmailButton() {
-    this.login = true;
-    this.forgot = false;
-    this.introModal = false;
+    this.loginService.open();
   }
 }
